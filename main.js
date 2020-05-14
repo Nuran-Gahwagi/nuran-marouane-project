@@ -17,14 +17,14 @@ var quotes = [
 ];
 
 
-function randomQuotes(arr) {
+
+/*function randomQuotes(arr) {
 return arr[Math.floor(Math.random() * arr.length)];
 }
-
-
-$('#quote-text').text('dhhdhdhd')
-
-
+*/
+ 
+   // $(".quote-text").text('dhhdhdhd')
+ 
 
 
 
