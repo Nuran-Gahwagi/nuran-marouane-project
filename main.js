@@ -22,6 +22,10 @@ return arr[Math.floor(Math.random() * arr.length)];
 }
 
 
+$('#quote-text').text('dhhdhdhd')
+
+
+
 
 
 
