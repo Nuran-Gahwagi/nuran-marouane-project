@@ -16,46 +16,22 @@ var quotes = [
 
 ];
 
+$.getJSON('https://type.fit/api/quotes', function(data){
+	var index = Math.floor(Math.random() * data.length)
+  $("#quote").text(data[index].text)
+  $("#auth").text(data[index].author)
+
+})
+
 
 /*
 function randomQuotes(arr) {
-	var newQuote = arr[Math.floor(Math.random() * arr.length)];
+	return arr[Math.floor(Math.random() * arr.length)];
 }
 
  
 // $(".quote-text").text('dhhdhdhd')
 
-$(document).ready(function(){
-  //current time
-  //update every 10 seconds;
-  setCurrentTime();
-  setInterval(function(){
-    setCurrentTime();
-  },10*1000);
 */
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 })
