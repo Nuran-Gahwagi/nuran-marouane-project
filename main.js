@@ -22,8 +22,15 @@ var quotes = [
 return arr[Math.floor(Math.random() * arr.length)];
 }
 */
- 
-   // $(".quote-text").text('dhhdhdhd')
+ $("#btn").on("click", function(){
+var value = target.value;
+   if(!value) return;
+  $('.name').fadeOut(function(){
+   $('#head').html(`Hello ${value}.`);
+        
+      });
+      })
+    
   
 
  
