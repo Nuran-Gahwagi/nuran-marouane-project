@@ -22,22 +22,20 @@ $.getJSON('https://type.fit/api/quotes', function(data){
   $("#auth").text(data[index].author)
   
 })
-var myVar = setInterval(myTimer, 1000);
-
-function myTimer() {
+var myVar = setInterval(setCurrentTimeAndDate, 1000);
+function setCurrentTimeAndDate(){
+  var now = new Date();
+  $('#time').html(now.getHours()+":"+now.getMinutes())
+  $('#date').html(now.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' }));
+}
+/*function myTimer() {
   var t = new Date();
   var hr = t.getHours();
   var min = t.getMinutes();
   var displayTime = hr + ":" + min;
   document.getElementById("time").innerHTML = displayTime;
 }
-
-function myDate() {
-	var d = new Date();
-	 document.getElementById("date").innerHTML = d.toLocalDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
-	 console.log(12)
-}
-
+*/
 
 $("#btn").click(function(){
     $("#txt").slideUp("slow");
