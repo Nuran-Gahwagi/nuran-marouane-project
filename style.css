@@ -26,14 +26,14 @@ font-family: bold;
 
 .top-left {
 flex: 1 0 auto;
-text-align: left;
+text-align: center;
 }
 .top-right {
 flex: 1 1 auto;
-text-align: right;
+text-align: center;
 }
 #time{
-font-size:150px;
+font-size:90px;
 margin:0;
 font-weight: 400;
 color: white;
@@ -43,22 +43,20 @@ color: white;
 
 }
 #date{
-	color: red;
+font-size:50px;
+color: white;
+font-family: bold;
 }
 #quote{
-	color: white;
+font-size:20px;
+color: white;
+font-family: bold;
 }
 
 #auth{
 	color: white;
 }
-#btn{
-  position: absolute;
-  bottom: 20px;
-  font-size: 20px;
-  cursor:pointer;
-  display: none;
-}
+
 #txt{
 
   transition: all 0.5s ease-out;
@@ -67,4 +65,20 @@ color: white;
   background-color: transparent;
   color: white;
 
+}
+.search{
+background-color: transparent;
+color: white;
+}
+#date{
+font-size:40px;
+color: white;
+font-family: bold;
+right: 0;
+margin-right: -15px;
+}
+#cheering {
+font-size:30px;
+color: white;
+font-family: bold;
 }

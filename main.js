@@ -22,9 +22,10 @@ function setCurrentTimeAndDate(){
 $('#txt').keypress(function(e) {
     var src = $('#txt').val()
     if(e.which == 13) {
-    $('#head').text('Hello, ' + src)
+    $('#head').text('Welcome, ' + src)
     $("#txt").slideUp("slow");
     $("#btn").hide();
+    $("#cheering").text("Here are the Quotes of the day.")
     }
   });
 })
