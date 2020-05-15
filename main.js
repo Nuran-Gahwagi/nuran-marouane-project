@@ -16,12 +16,12 @@ var quotes = [
 
 ];
 
-$.getJSON('https://type.fit/api/quotes', function(data){
+$(".container").setInterval(function(){$.getJSON('https://type.fit/api/quotes', function(data){
 	var index = Math.floor(Math.random() * data.length)
   $("#quote").text(data[index].text)
   $("#auth").text(data[index].author)
 
-})
+})},1000)
 
 
 /*
