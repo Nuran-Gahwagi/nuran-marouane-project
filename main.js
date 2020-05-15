@@ -17,13 +17,22 @@ var quotes = [
 ];
 
 
-
-/*function randomQuotes(arr) {
-return arr[Math.floor(Math.random() * arr.length)];
+/*
+function randomQuotes(arr) {
+	var newQuote = arr[Math.floor(Math.random() * arr.length)];
 }
-*/
+
  
-   // $(".quote-text").text('dhhdhdhd')
+$(document).ready(function(){
+  //current time
+  //update every 10 seconds;
+  setCurrentTime();
+  setInterval(function(){
+    setCurrentTime();
+  },10*1000);
+*/
+
+
  
 
 
