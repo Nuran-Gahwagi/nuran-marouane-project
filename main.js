@@ -22,7 +22,7 @@ var quotes = [
 return arr[Math.floor(Math.random() * arr.length)];
 }
 */
- $("#btn").on("click", function(){
+ /*$("#btn").on("click", function(){
 var value = target.value;
    if(!value) return;
   $('.name').fadeOut(function(){
@@ -30,7 +30,7 @@ var value = target.value;
         
       });
       })
-    
+    */
   
 
  
