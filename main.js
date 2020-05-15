@@ -23,6 +23,8 @@ function randomQuotes(arr) {
 }
 
  
+// $(".quote-text").text('dhhdhdhd')
+
 $(document).ready(function(){
   //current time
   //update every 10 seconds;
@@ -31,6 +33,7 @@ $(document).ready(function(){
     setCurrentTime();
   },10*1000);
 */
+
 
 
  
