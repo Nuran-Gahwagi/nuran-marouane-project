@@ -1,37 +1,31 @@
 window.visitor;
 $(document).ready(function() { 
 
-var quotes = [
-{   "quote" : "You cannot change the circumstances but you can change yourself.",
-	"writer" : "Jim Rohn"
-},
-
- { "quote" : "Be yourself, everyone else is already taken.",
-    "writer" : "Oscar Wilde"
- },
-
- { "quote" : "Live as if you were to die tomorrow. Learn as if you were to live forever.",
-  "writer" : "Mahatma Gandhi"
-},
-
-];
-
-$(".container").setInterval(function(){$.getJSON('https://type.fit/api/quotes', function(data){
-	var index = Math.floor(Math.random() * data.length)
+$.getJSON('https://type.fit/api/quotes', function(data){
+	setInterval(function(){
+    var index = Math.floor(Math.random() * data.length)
   $("#quote").text(data[index].text)
   $("#auth").text(data[index].author)
-
-})},1000)
-
-
-/*
-function randomQuotes(arr) {
-	return arr[Math.floor(Math.random() * arr.length)];
-}
-
- 
-// $(".quote-text").text('dhhdhdhd')
-
-*/
+  },10000)
+  
 
 })
+
+  
+var myVar = setInterval(setCurrentTimeAndDate, 1000);
+function setCurrentTimeAndDate(){
+  var now = new Date();
+  $('#time').html(now.getHours()+":"+now.getMinutes())
+  $('#date').html(now.toLocaleDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' }));
+}
+
+$('#txt').keypress(function(e) {
+    var src = $('#txt').val()
+    if(e.which == 13) {
+    $('#head').text('Hello, ' + src)
+    $("#txt").slideUp("slow");
+    $("#btn").hide();
+    }
+  });
+})
+
