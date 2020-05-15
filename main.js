@@ -16,41 +16,35 @@ var quotes = [
 
 ];
 
-
-
-/*function randomQuotes(arr) {
-return arr[Math.floor(Math.random() * arr.length)];
-}
-*/
- /*$("#btn").on("click", function(){
-var value = target.value;
-   if(!value) return;
-  $('.name').fadeOut(function(){
-   $('#head').html(`Hello ${value}.`);
-        
-      });
-      })
-    */
+$.getJSON('https://type.fit/api/quotes', function(data){
+	var index = Math.floor(Math.random() * data.length)
+  $("#quote").text(data[index].text)
+  $("#auth").text(data[index].author)
   
+})
+var myVar = setInterval(myTimer, 1000);
 
- 
+function myTimer() {
+  var t = new Date();
+  var hr = t.getHours();
+  var min = t.getMinutes();
+  var displayTime = hr + ":" + min;
+  document.getElementById("time").innerHTML = displayTime;
+}
+
+function myDate() {
+	var d = new Date();
+	 document.getElementById("date").innerHTML = d.toLocalDateString('en-US', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' });
+	 console.log(12)
+}
 
 
+$("#btn").click(function(){
+    $("#txt").slideUp("slow");
+    $("#btn").hide();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  });
 
 
 
