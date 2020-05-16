@@ -28,10 +28,10 @@ position: fixed;
 font-size:120px;
 font-weight: bold;
 color: white;
-position: fixed;
+/*position: fixed;
   top: 150px;
   left: 40%;
-  width: 300px;
+  width: 300px;*/
 margin: auto;
 padding: 150px 0;
 justify-content: center;
